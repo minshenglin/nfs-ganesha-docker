@@ -1,0 +1,7 @@
+[nfs]
+name=NFS packages
+baseurl=http://download.ceph.com/nfs-ganesha/rpm-V2.6-stable/luminous/x86_64/
+enabled=1
+gpgcheck=1
+type=rpm-md
+gpgkey=https://download.ceph.com/keys/release.asc
