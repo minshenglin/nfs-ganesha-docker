@@ -20,20 +20,7 @@ echo "RADOS_URLS {
 	userid = admin;
 }
 
-%url rados://$GANESHA_CONFIG_POOL/$GANESHA_CONFIG
-
-NFSv4 {
-	Delegations = false;
-        RecoveryBackend = rados_ng;
-        Minor_Versions =  1,2;
-}
-
-RGW {
-        ceph_conf = /etc/ceph/ceph.conf;
-        name = \"client.admin\";
-        cluster = ceph;
-        init_args = \"--keyring=/etc/ceph/ceph.client.admin.keyring\";
-}" > $config_path
+%url rados://$GANESHA_CONFIG_POOL/$GANESHA_CONFIG" > $config_path
 
 cat $config_path
 
